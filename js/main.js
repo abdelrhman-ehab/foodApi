@@ -91,7 +91,7 @@ $(searchButton).click(async function (e) {
     let cartona = ``;
     for (let i = 0; i < searchedRecipes.length; i++) {
         cartona += `
-                    <div class="col-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                         <div class="col-content">
                             <div class="col-poster">
                                 <img src="${searchedRecipes[i].strMealThumb}" alt="">
