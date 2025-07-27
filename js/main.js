@@ -91,19 +91,21 @@ $(searchButton).click(async function (e) {
     let cartona = ``;
     for (let i = 0; i < searchedRecipes.length; i++) {
         cartona += `
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 recipe">
                         <div class="col-content">
                             <div class="col-poster">
                                 <img src="${searchedRecipes[i].strMealThumb}" alt="">
                             </div>
                             <div class="col-caption">
                                 <p>${searchedRecipes[i].strMeal.split(' ').slice(0, 3).join(' ')}</p>
+                                <p class = "recipeId">Recipe Id: ${recipes[i].idMeal}</p>
                             </div>
                         </div>
                     </div>
             `
         recipesContainer.innerHTML = cartona;
     }
+    getRecipeDetailsFn();
 });
 
 
